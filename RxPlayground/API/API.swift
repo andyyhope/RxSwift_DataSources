@@ -9,11 +9,11 @@
 import Foundation
 
 enum API {
-    case persons
+    case persons, compound
     
     var url : NSURL {
         switch self {
-        case .persons:
+        case .persons, .compound:
             return NSURL()
         }
     }
@@ -22,6 +22,8 @@ enum API {
         switch self {
         case .persons:
             return RequestResource(filename: "Persons")
+        case .compound:
+            return RequestResource(filename: "Compound")
         }
     }
 }

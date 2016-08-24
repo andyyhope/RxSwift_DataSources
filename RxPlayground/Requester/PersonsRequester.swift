@@ -1,5 +1,5 @@
 //
-//  PersonsRequester.swift
+//  Requester.swift
 //  RxPlayground
 //
 //  Created by Andyy Hope on 24/08/2016.
@@ -9,7 +9,21 @@
 import Foundation
 import SwiftyJSON
 
-class PersonsRequester : Requestable, RequestTestable {
+class Requester : Requestable, RequestTestable {
+    
+    // MARK: - Requests
+    
+    static func testCompound(delay delay: Int, completion: RequestResponse<Compound>.Completion) {
+        
+        test(.compound, log: true, delay: delay) {
+            switch $0 {
+            case .success(let response):
+                parseCompound(response, completion: completion)
+            case .fail:
+                break
+            }
+        }
+    }
     
     static func testPersons(delay delay: Int, completion: RequestResponse<[Person]>.Completion) {
         test(.persons, log: true, delay: delay) {
@@ -19,6 +33,19 @@ class PersonsRequester : Requestable, RequestTestable {
             case .fail:
                 break
             }
+        }
+    }
+    
+    
+    // MARK: - Parse
+    
+    private static func parseCompound(response: JSON, completion: RequestResponse<Compound>.Completion) {
+        
+        if let compound = Compound(json: response) {
+            completion(response: .success(compound))
+        }
+        else {
+            completion(response: .fail(.failedInitializer))
         }
     }
     

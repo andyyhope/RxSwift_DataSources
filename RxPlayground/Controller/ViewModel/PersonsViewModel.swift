@@ -17,7 +17,7 @@ struct PersonsViewModel {
     }
     
     func requestTest(delay delay: Int) {
-        PersonsRequester.testPersons(delay: delay) {
+        Requester.testPersons(delay: delay) {
             guard case .success(let persons) = $0 else { return }
             
             self.persons.value = persons
