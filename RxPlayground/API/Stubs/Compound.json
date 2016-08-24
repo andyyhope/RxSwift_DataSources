@@ -1,0 +1,76 @@
+{
+	"persons" : [
+		{
+			"name" : "andyy",
+			"age" : 29
+		},
+		{
+			"name" : "hayden",
+			"age" : 25
+		},
+		{
+			"name" : "trent",
+			"age" : 31
+		},
+		{
+			"name" : "chris",
+			"age" : 30
+		},
+		{
+			"name" : "karl",
+			"age" : 23
+		},
+		{
+			"name" : "sylvain",
+			"age" : 24
+		},
+		{
+			"name" : "daisy",
+			"age" : 30
+		}
+	],
+	"dogs" : [
+		{
+			"name" : "max",
+			"color" : "golden"
+		},
+		{
+			"name" : "bruce",
+			"color" : "brown"
+		},
+		{
+			"name" : "cali",
+			"color" : "caramel"
+		},
+		{
+			"name" : "winston",
+			"color" : "white"
+		}
+	],
+	"cars" : [
+		{
+			"make" : "holden",
+			"model" : "commodore"
+		},
+		{
+			"make" : "ford",
+			"model" : "falcon"
+		},
+		{
+			"make" : "hyundai",
+			"model" : "lantra"
+		},
+		{
+			"make" : "volkswagen",
+			"model" : "golf"
+		},
+		{
+			"make" : "subaru",
+			"model" : "wrx"
+		},
+		{
+			"make" : "kia",
+			"model" : "rio"
+		}
+	]
+}
